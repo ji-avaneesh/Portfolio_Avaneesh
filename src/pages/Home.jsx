@@ -908,9 +908,11 @@ export default function Home() {
                     className="hero-photo-img"
                     onError={(e) => {
                       e.target.style.display = "none";
+                      const fallback = e.target.parentElement?.querySelector(".hero-photo-fallback");
+                      if (fallback) fallback.style.display = "flex";
                     }}
                   />
-                  <div className="hero-photo-fallback" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div className="hero-photo-fallback" style={{ position: "absolute", inset: 0, display: "none", alignItems: "center", justifyContent: "center" }}>
                     {siteConfig.shortName}
                   </div>
                 </div>
