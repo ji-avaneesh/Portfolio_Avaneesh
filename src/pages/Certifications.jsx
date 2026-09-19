@@ -4,13 +4,14 @@ import {
   GraduationCap, Award, Briefcase, Star, Search, 
   SlidersHorizontal, Eye, X, CheckCircle2, 
   ArrowRight, FileText, ChevronRight,
-  Layout, Server, Database, Brain, Cpu, Cloud, Code, Terminal, Shield, Target, TrendingUp
+  Layout, Server, Database, Brain, Cpu, Cloud, Code, Terminal, Shield, Target, TrendingUp,
+  Rocket
 } from "lucide-react";
 
 // ── SVG Brand & University Logos ──
-function HBTULogo() {
+function HBTULogo({ size = 26 }) {
   return (
-    <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="10" fill="#7f1d1d" />
       <path d="M24 8L36 13V24C36 31.5 30.5 38.2 24 40C17.5 38.2 12 31.5 12 24V13L24 8Z" fill="#991b1b" stroke="#fde047" strokeWidth="1.5" />
       <path d="M24 16V32M18 24H30" stroke="#fde047" strokeWidth="2" strokeLinecap="round" />
@@ -20,9 +21,9 @@ function HBTULogo() {
   );
 }
 
-function AllahabadUniLogo() {
+function AllahabadUniLogo({ size = 26 }) {
   return (
-    <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="24" cy="24" r="23" fill="#1e3a8a" stroke="#ca8a04" strokeWidth="2" />
       <circle cx="24" cy="24" r="18" fill="#172554" stroke="#ca8a04" strokeWidth="1" strokeDasharray="2 2" />
       <path d="M24 13L28 21H36L30 26L32 34L24 29L16 34L18 26L12 21H20L24 13Z" fill="#fbbf24" opacity="0.9" />
@@ -31,9 +32,9 @@ function AllahabadUniLogo() {
   );
 }
 
-function SchoolCrestLogo({ text = "SN" }) {
+function SchoolCrestLogo({ text = "SN", size = 26 }) {
   return (
-    <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="10" fill="#fff7ed" stroke="#fdba74" strokeWidth="1.2" />
       <path d="M24 10L35 15V24C35 30.5 30 36 24 38C18 36 13 30.5 13 24V15L24 10Z" fill="#ea580c" />
       <circle cx="24" cy="24" r="5" fill="#fef08a" />
@@ -42,9 +43,9 @@ function SchoolCrestLogo({ text = "SN" }) {
   );
 }
 
-function InterCollegeLogo() {
+function InterCollegeLogo({ size = 26 }) {
   return (
-    <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="48" height="48" rx="10" fill="#fef2f2" stroke="#fca5a5" strokeWidth="1.2" />
       <circle cx="24" cy="24" r="14" fill="#dc2626" />
       <path d="M24 14L27 21H34L29 25L31 32L24 28L17 32L19 25L14 21H21L24 14Z" fill="#fef08a" />
@@ -55,7 +56,7 @@ function InterCollegeLogo() {
 
 function UdemyLogo() {
   return (
-    <svg width="18" height="18" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="16" height="16" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M10 11V18C10 21.866 13.134 25 17 25C20.866 25 24 21.866 24 18V11" stroke="#a435f0" strokeWidth="3" strokeLinecap="round" />
       <path d="M17 7L13 11H21L17 7Z" fill="#a435f0" />
     </svg>
@@ -64,7 +65,7 @@ function UdemyLogo() {
 
 function CourseraLogo() {
   return (
-    <svg width="18" height="18" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="16" height="16" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="17" cy="17" r="11" fill="#0056d2" />
       <path d="M20 13C18 11 14 12 13 15C12 18 13 21 16 22C18 22.5 20 21.5 21 20" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" fill="none" />
     </svg>
@@ -73,7 +74,7 @@ function CourseraLogo() {
 
 function GoogleLogo() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
@@ -84,7 +85,7 @@ function GoogleLogo() {
 
 function OpenAILogo() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" color="#10a37f">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" color="#10a37f">
       <path d="M22.28 9.37a5.55 5.55 0 0 0-.47-4.55 5.68 5.68 0 0 0-5.69-2.73 5.55 5.55 0 0 0-4.14-1.84 5.67 5.67 0 0 0-5.38 3.86 5.57 5.57 0 0 0-3.66 2.65 5.68 5.68 0 0 0 .73 6.22 5.55 5.55 0 0 0 .47 4.55 5.68 5.68 0 0 0 5.69 2.73 5.54 5.54 0 0 0 4.14 1.84 5.67 5.67 0 0 0 5.38-3.86 5.57 5.57 0 0 0 3.66-2.65 5.68 5.68 0 0 0-.73-6.22zM12 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
     </svg>
   );
@@ -92,7 +93,7 @@ function OpenAILogo() {
 
 function GithubLogo() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" color="#1e293b">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" color="#1e293b">
       <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
     </svg>
   );
@@ -100,7 +101,7 @@ function GithubLogo() {
 
 function DockerLogo() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#0284c7">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="#0284c7">
       <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.714h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185"/>
       <path d="M23.79 11.758a5.55 5.55 0 00-2.316-1.077c-.126-.035-.252-.063-.38-.084-.332-.572-.81-1.025-1.397-1.319-.133-.067-.272-.122-.416-.164-.236-.07-.482-.109-.738-.114h-1.42a.186.186 0 00-.186.186v1.888c0 .102.084.185.186.185h.85c.19 0 .37.042.536.118a.95.95 0 01.42.42c.076.166.118.347.118.536 0 .524-.424.95-.949.95H.812a.812.812 0 00-.812.812c0 1.637.378 3.238 1.1 4.678.892 1.776 2.26 3.228 3.968 4.2 1.706.972 3.633 1.488 5.586 1.496 7.42 0 13.118-5.32 13.136-12.726"/>
     </svg>
@@ -135,7 +136,7 @@ export default function Certifications() {
     },
     {
       id: "bsc",
-      year: "2016 – 2019",
+      year: "2016–19",
       title: "B.Sc. Mathematics",
       institution: "Allahabad State University",
       result: "1st Division",
@@ -144,7 +145,7 @@ export default function Certifications() {
     },
     {
       id: "mca",
-      year: "2023 – 2025",
+      year: "2023–25",
       title: "MCA",
       institution: "Harcourt Butler Technical University (HBTU)",
       result: "7.5 CGPA",
@@ -153,8 +154,8 @@ export default function Certifications() {
     },
     {
       id: "academic-specialization",
-      year: "2024 – 2025",
-      title: "Advanced CS & AI Specialization",
+      year: "2024–25",
+      title: "Advanced CS Specialization",
       institution: "HBTU Technical Department",
       result: "Academic Excellence",
       logo: <HBTULogo />,
@@ -170,7 +171,7 @@ export default function Certifications() {
       count: 4,
       skills: "HTML, CSS, JavaScript, React, Next.js, Tailwind",
       color: "#3b82f6",
-      icon: <Layout size={16} />,
+      icon: <Layout size={15} />,
       iconsList: ["udemy", "google", "coursera"],
       certs: [
         { title: "React – The Complete Guide", issuer: "Udemy", date: "Mar 2024", id: "REACT-UDE" },
@@ -185,7 +186,7 @@ export default function Certifications() {
       count: 4,
       skills: "Node.js, Express.js, REST APIs, NestJS",
       color: "#10b981",
-      icon: <Server size={16} />,
+      icon: <Server size={15} />,
       iconsList: ["node", "express", "nest"],
       certs: [
         { title: "Node.js & Express Backend Development", issuer: "Udemy", date: "Feb 2024", id: "NODE-EXP" },
@@ -200,7 +201,7 @@ export default function Certifications() {
       count: 3,
       skills: "SQL, MySQL, PostgreSQL, MongoDB, Redis",
       color: "#2563eb",
-      icon: <Database size={16} />,
+      icon: <Database size={15} />,
       iconsList: ["mongo", "postgres", "redis"],
       certs: [
         { title: "SQL for Data Science", issuer: "Great Learning", date: "Nov 2023", id: "SQL-DS" },
@@ -214,7 +215,7 @@ export default function Certifications() {
       count: 5,
       skills: "Generative AI, ML, DL, Agentic AI, RAG",
       color: "#8b5cf6",
-      icon: <Brain size={16} />,
+      icon: <Brain size={15} />,
       iconsList: ["openai", "google", "coursera"],
       certs: [
         { title: "Deep Learning Specialization", issuer: "DeepLearning.AI", date: "Feb 2024", id: "DL-SPEC" },
@@ -230,7 +231,7 @@ export default function Certifications() {
       count: 4,
       skills: "ChatGPT, Gemini, Copilot, Claude, LangChain",
       color: "#6366f1",
-      icon: <Cpu size={16} />,
+      icon: <Cpu size={15} />,
       iconsList: ["openai", "google", "github"],
       certs: [
         { title: "Google Gemini Multi-Modal Masterclass", issuer: "Google Cloud", date: "Mar 2024", id: "GEMINI-AI" },
@@ -245,7 +246,7 @@ export default function Certifications() {
       count: 3,
       skills: "Git, GitHub, Docker, Vercel, Firebase, Nginx",
       color: "#0284c7",
-      icon: <Cloud size={16} />,
+      icon: <Cloud size={15} />,
       iconsList: ["github", "docker", "google"],
       certs: [
         { title: "Docker Essentials & Containers", issuer: "Coursera", date: "Jul 2023", id: "DOCKER-CONT" },
@@ -259,7 +260,7 @@ export default function Certifications() {
       count: 4,
       skills: "Operating System, DBMS, Computer Networks, DSA",
       color: "#06b6d4",
-      icon: <Code size={16} />,
+      icon: <Code size={15} />,
       iconsList: ["udemy", "coursera"],
       certs: [
         { title: "Data Structures & Algorithms in C++", issuer: "Scaler Academy", date: "Oct 2023", id: "DSA-CPP" },
@@ -274,7 +275,7 @@ export default function Certifications() {
       count: 3,
       skills: "VS Code, Postman, Linux, Git, Jira",
       color: "#0d9488",
-      icon: <Terminal size={16} />,
+      icon: <Terminal size={15} />,
       iconsList: ["github", "google"],
       certs: [
         { title: "Postman API Testing & Automation", issuer: "Postman Academy", date: "Nov 2023", id: "POSTMAN-API" },
@@ -288,7 +289,7 @@ export default function Certifications() {
       count: 3,
       skills: "Cybersecurity, Testing, Agile, System Design",
       color: "#a855f7",
-      icon: <Shield size={16} />,
+      icon: <Shield size={15} />,
       iconsList: ["coursera", "udemy"],
       certs: [
         { title: "Cybersecurity Fundamentals", issuer: "Cisco Networking Academy", date: "Jan 2024", id: "CISCO-SEC" },
@@ -302,45 +303,55 @@ export default function Certifications() {
   const roadmapSteps = [
     {
       id: "step-1",
+      stepNum: "01",
       title: "Foundation (2014 – 2019)",
-      subtitle: "School → Intermediate → B.Sc. Mathematics",
+      subtitle: "School → Intermediate → B.Sc. Math",
       dotColor: "#10b981",
+      icon: <GraduationCap size={12} />,
       statusText: "Completed",
       statusColor: "#059669",
       statusBg: "rgba(16, 185, 129, 0.12)"
     },
     {
       id: "step-2",
-      title: "Core CS & Development (2020 – 2023)",
+      stepNum: "02",
+      title: "Core CS & Dev (2020 – 2023)",
       subtitle: "C, C++, DSA, Web Development",
       dotColor: "#2563eb",
+      icon: <Code size={12} />,
       statusText: "Completed",
       statusColor: "#059669",
       statusBg: "rgba(16, 185, 129, 0.12)"
     },
     {
       id: "step-3",
-      title: "MCA & Advanced Learning (2023 – 2025)",
-      subtitle: "Advanced CS, AI, Full Stack Development",
+      stepNum: "03",
+      title: "MCA & Advanced (2023 – 2025)",
+      subtitle: "Advanced CS, AI, Full Stack Dev",
       dotColor: "#7c3aed",
+      icon: <Brain size={12} />,
       statusText: "Completed",
       statusColor: "#059669",
       statusBg: "rgba(16, 185, 129, 0.12)"
     },
     {
       id: "step-4",
-      title: "Professional Certifications (2024 – Present)",
-      subtitle: "Specialized certifications in Web, Cloud, AI, DevOps",
+      stepNum: "04",
+      title: "Certifications (2024 – Present)",
+      subtitle: "Web, Cloud, AI & DevOps Specialization",
       dotColor: "#f43f5e",
+      icon: <Award size={12} />,
       statusText: "In Progress",
       statusColor: "#e11d48",
       statusBg: "rgba(244, 63, 94, 0.12)"
     },
     {
       id: "step-5",
-      title: "Beyond – Continuous Learning",
-      subtitle: "Exploring new technologies, building products",
+      stepNum: "05",
+      title: "Continuous Learning",
+      subtitle: "Emerging Tech, Scaled AI Products",
       dotColor: "#f59e0b",
+      icon: <Rocket size={12} />,
       statusText: "Ongoing",
       statusColor: "#d97706",
       statusBg: "rgba(245, 158, 11, 0.12)"
@@ -375,12 +386,13 @@ export default function Certifications() {
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
         .cert-page {
-          padding-top: 130px;
-          padding-bottom: 80px;
-          max-width: 1240px;
+          padding-top: 116px;
+          padding-bottom: 60px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding-left: 24px;
-          padding-right: 24px;
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 100%;
           box-sizing: border-box;
           font-family: 'Outfit', sans-serif;
           color: #0f172a;
@@ -391,14 +403,14 @@ export default function Certifications() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 24px;
-          margin-bottom: 28px;
+          gap: 20px;
+          margin-bottom: 24px;
           flex-wrap: wrap;
         }
 
         .cert-hero-left {
-          flex: 1.15;
-          min-width: 320px;
+          flex: 1.1;
+          min-width: 300px;
         }
 
         .cert-pill-badge {
@@ -408,16 +420,16 @@ export default function Certifications() {
           letter-spacing: 1.4px;
           color: #64748b;
           text-transform: uppercase;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
         }
 
         .cert-hero-title {
-          font-size: 2.5rem;
+          font-size: 2.35rem;
           font-weight: 900;
           line-height: 1.12;
           letter-spacing: -0.8px;
           color: #0f172a;
-          margin: 0 0 10px 0;
+          margin: 0 0 8px 0;
         }
 
         .cert-hero-title .highlight-word {
@@ -428,30 +440,30 @@ export default function Certifications() {
         }
 
         .cert-hero-desc {
-          font-size: 0.94rem;
-          line-height: 1.58;
+          font-size: 0.92rem;
+          line-height: 1.55;
           color: #64748b;
           margin: 0;
-          max-width: 520px;
+          max-width: 500px;
         }
 
         /* ── Center Quote Box ── */
         .cert-quote-box {
-          flex: 0.95;
-          min-width: 250px;
-          background: rgba(255, 255, 255, 0.78);
+          flex: 0.9;
+          min-width: 240px;
+          background: rgba(255, 255, 255, 0.8);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.9);
-          border-radius: 20px;
-          padding: 16px 20px;
-          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.95);
+          border-radius: 18px;
+          padding: 14px 18px;
+          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
           box-sizing: border-box;
           position: relative;
         }
 
         .cert-quote-mark {
-          font-size: 2.8rem;
+          font-size: 2.6rem;
           line-height: 0.8;
           color: #93c5fd;
           font-family: serif;
@@ -459,15 +471,15 @@ export default function Certifications() {
         }
 
         .cert-quote-text {
-          font-size: 0.85rem;
-          line-height: 1.48;
+          font-size: 0.84rem;
+          line-height: 1.45;
           color: #334155;
           font-style: italic;
-          margin: 0 0 8px 0;
+          margin: 0 0 6px 0;
         }
 
         .cert-quote-author {
-          font-size: 0.75rem;
+          font-size: 0.74rem;
           font-weight: 700;
           color: #64748b;
         }
@@ -475,53 +487,53 @@ export default function Certifications() {
         /* ── Right 4 Counter Cards ── */
         .cert-counters-row {
           display: flex;
-          gap: 12px;
+          gap: 10px;
           align-items: center;
         }
 
         .cert-counter-card {
-          background: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.82);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.95);
           border-radius: 16px;
-          padding: 14px 12px;
-          min-width: 82px;
+          padding: 12px 10px;
+          min-width: 78px;
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
-          box-shadow: 0 8px 20px rgba(15, 23, 42, 0.03);
+          box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .cert-counter-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+          box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
         }
 
         .counter-icon-bubble {
-          width: 32px;
-          height: 32px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
         }
 
         .counter-num {
-          font-size: 1.35rem;
+          font-size: 1.3rem;
           font-weight: 900;
           color: #0f172a;
           line-height: 1.1;
         }
 
         .counter-label {
-          font-size: 0.7rem;
+          font-size: 0.68rem;
           font-weight: 700;
           color: #475569;
-          margin-top: 3px;
+          margin-top: 2px;
           line-height: 1.2;
         }
 
@@ -530,15 +542,15 @@ export default function Certifications() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 16px;
-          margin-bottom: 24px;
+          gap: 14px;
+          margin-bottom: 22px;
           width: 100%;
         }
 
         .cert-filters-list {
           display: flex;
           align-items: center;
-          gap: 7px;
+          gap: 6px;
           flex: 1;
           min-width: 0;
           overflow-x: auto;
@@ -553,9 +565,9 @@ export default function Certifications() {
         }
 
         .filter-pill-btn {
-          padding: 6px 14px;
+          padding: 6px 13px;
           border-radius: 100px;
-          font-size: 0.78rem;
+          font-size: 0.76rem;
           font-weight: 750;
           cursor: pointer;
           border: 1px solid transparent;
@@ -582,7 +594,7 @@ export default function Certifications() {
 
         .cert-search-wrap {
           position: relative;
-          width: 240px;
+          width: 220px;
           flex-shrink: 0;
           display: flex;
           align-items: center;
@@ -590,11 +602,11 @@ export default function Certifications() {
 
         .cert-search-input {
           width: 100%;
-          padding: 7px 34px 7px 32px;
+          padding: 6px 32px 6px 30px;
           border-radius: 100px;
           background: rgba(255, 255, 255, 0.85);
           border: 1px solid rgba(226, 232, 240, 0.9);
-          font-size: 0.8rem;
+          font-size: 0.78rem;
           color: #0f172a;
           outline: none;
           transition: all 0.2s ease;
@@ -609,64 +621,68 @@ export default function Certifications() {
 
         .search-icon-left {
           position: absolute;
-          left: 11px;
+          left: 10px;
           color: #94a3b8;
           pointer-events: none;
         }
 
         .search-icon-right {
           position: absolute;
-          right: 11px;
+          right: 10px;
           color: #64748b;
           cursor: pointer;
         }
 
-        /* ── 3-COLUMN PRIMARY GRID ── */
+        /* ── 3-COLUMN PRIMARY GRID (Balanced & Non-Overflowing) ── */
         .cert-3col-grid {
           display: grid;
-          grid-template-columns: 1.05fr 1.6fr 1.05fr;
-          gap: 20px;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr) minmax(0, 1fr);
+          gap: 12px;
           align-items: stretch;
+          width: 100%;
+          box-sizing: border-box;
         }
 
         .cert-column-card {
-          background: rgba(255, 255, 255, 0.82);
+          background: rgba(255, 255, 255, 0.85);
           backdrop-filter: blur(24px);
           -webkit-backdrop-filter: blur(24px);
           border: 1px solid rgba(255, 255, 255, 0.95);
-          border-radius: 22px;
-          padding: 22px 18px;
-          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.035);
+          border-radius: 18px;
+          padding: 16px 12px;
+          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.035);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           box-sizing: border-box;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
+          min-width: 0;
         }
 
         .cert-column-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+          box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
         }
 
         .column-header-row {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
-          gap: 12px;
-          margin-bottom: 18px;
+          gap: 8px;
+          margin-bottom: 12px;
         }
 
         .column-header-left {
           display: flex;
           align-items: flex-start;
-          gap: 12px;
+          gap: 8px;
+          min-width: 0;
         }
 
         .column-icon-bubble {
-          width: 38px;
-          height: 38px;
-          border-radius: 12px;
+          width: 32px;
+          height: 32px;
+          border-radius: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -674,56 +690,60 @@ export default function Certifications() {
         }
 
         .column-title-text {
-          font-size: 1.08rem;
+          font-size: 0.98rem;
           font-weight: 850;
           color: #0f172a;
           margin: 0;
           letter-spacing: -0.2px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .column-sub-text {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           color: #64748b;
-          margin: 3px 0 0 0;
-          line-height: 1.35;
+          margin: 2px 0 0 0;
+          line-height: 1.3;
         }
 
         .column-badge-pill {
-          padding: 3px 9px;
+          padding: 2px 7px;
           border-radius: 100px;
-          font-size: 0.72rem;
+          font-size: 0.68rem;
           font-weight: 800;
           flex-shrink: 0;
         }
 
-        /* ── Column 1: Academic Degrees Timeline (100% Inside Container) ── */
+        /* ── Column 1: Academic Degrees (Shifted Left, 100% Inside) ── */
         .academic-timeline-list {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          margin-bottom: 16px;
+          gap: 7px;
+          margin-bottom: 12px;
           width: 100%;
         }
 
         .academic-row {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 5px;
           width: 100%;
         }
 
         .academic-year-col {
-          width: 68px;
-          text-align: right;
-          font-size: 0.72rem;
+          width: 44px;
+          text-align: left;
+          font-size: 0.67rem;
           font-weight: 800;
           color: #64748b;
           flex-shrink: 0;
-          line-height: 1.2;
+          line-height: 1.15;
+          letter-spacing: -0.2px;
         }
 
         .academic-track-col {
-          width: 18px;
+          width: 12px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -733,8 +753,8 @@ export default function Certifications() {
         }
 
         .academic-dot {
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           border: 2px solid #ffffff;
           box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
@@ -747,7 +767,7 @@ export default function Certifications() {
           width: 2px;
           background: #e2e8f0;
           top: 100%;
-          height: 12px;
+          height: 9px;
           z-index: 1;
         }
 
@@ -757,38 +777,42 @@ export default function Certifications() {
         }
 
         .academic-card-inner {
-          background: rgba(255, 255, 255, 0.75);
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 14px;
-          padding: 8px 12px;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px solid rgba(226, 232, 240, 0.95);
+          border-radius: 12px;
+          padding: 6px 8px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 8px;
+          gap: 6px;
           transition: all 0.2s ease;
           cursor: pointer;
+          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
         }
 
         .academic-card-inner:hover {
           background: #ffffff;
           border-color: #cbd5e1;
           transform: translateX(2px);
-          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+          box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
         }
 
         .academic-item-left {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 6px;
           min-width: 0;
         }
 
         .academic-logo-wrap {
           flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .academic-degree-name {
-          font-size: 0.82rem;
+          font-size: 0.77rem;
           font-weight: 800;
           color: #0f172a;
           white-space: nowrap;
@@ -797,7 +821,7 @@ export default function Certifications() {
         }
 
         .academic-inst-name {
-          font-size: 0.7rem;
+          font-size: 0.66rem;
           color: #64748b;
           white-space: nowrap;
           overflow: hidden;
@@ -805,16 +829,16 @@ export default function Certifications() {
         }
 
         .academic-result-pill {
-          font-size: 0.66rem;
+          font-size: 0.62rem;
           font-weight: 700;
           color: #475569;
           margin-top: 1px;
         }
 
         .academic-eye-btn {
-          width: 28px;
-          height: 28px;
-          border-radius: 8px;
+          width: 24px;
+          height: 24px;
+          border-radius: 7px;
           background: #f8fafc;
           border: 1px solid #e2e8f0;
           color: #64748b;
@@ -834,68 +858,69 @@ export default function Certifications() {
 
         .column-bottom-btn {
           margin-top: auto;
-          padding: 9px 14px;
-          border-radius: 12px;
-          font-size: 0.8rem;
+          padding: 8px 12px;
+          border-radius: 10px;
+          font-size: 0.78rem;
           font-weight: 750;
           border: none;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 8px;
+          gap: 6px;
           text-decoration: none;
           transition: all 0.2s ease;
           box-sizing: border-box;
           width: 100%;
         }
 
-        /* ── Column 2: Skill Categories 3x3 Grid (Compact) ── */
+        /* ── Column 2: Skill Categories 3x3 Grid (Compact & Centered) ── */
         .skill-categories-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
-          margin-bottom: 16px;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 8px;
+          margin-bottom: 14px;
         }
 
         .skill-category-cell {
           background: rgba(255, 255, 255, 0.75);
           border: 1px solid rgba(226, 232, 240, 0.85);
-          border-radius: 12px;
-          padding: 10px 10px;
+          border-radius: 11px;
+          padding: 8px 8px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           cursor: pointer;
           transition: all 0.2s ease;
-          min-height: 98px;
+          min-height: 94px;
           box-sizing: border-box;
+          min-width: 0;
         }
 
         .skill-category-cell:hover {
           background: #ffffff;
           border-color: #cbd5e1;
           transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(99, 102, 241, 0.08);
+          box-shadow: 0 6px 14px rgba(99, 102, 241, 0.08);
         }
 
         .cell-top-row {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
-          gap: 6px;
-          margin-bottom: 5px;
+          gap: 4px;
+          margin-bottom: 4px;
         }
 
         .cell-title-wrap {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 4px;
           min-width: 0;
         }
 
         .cell-title {
-          font-size: 0.74rem;
+          font-size: 0.72rem;
           font-weight: 800;
           color: #0f172a;
           line-height: 1.2;
@@ -905,9 +930,9 @@ export default function Certifications() {
         }
 
         .cell-count-badge {
-          font-size: 0.62rem;
+          font-size: 0.6rem;
           font-weight: 800;
-          padding: 1px 5px;
+          padding: 1px 4px;
           border-radius: 100px;
           background: rgba(16, 185, 129, 0.1);
           color: #059669;
@@ -915,10 +940,10 @@ export default function Certifications() {
         }
 
         .cell-subtext {
-          font-size: 0.65rem;
-          line-height: 1.32;
+          font-size: 0.63rem;
+          line-height: 1.3;
           color: #64748b;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -936,7 +961,7 @@ export default function Certifications() {
         .cell-icons-row {
           display: flex;
           align-items: center;
-          gap: 3px;
+          gap: 2px;
         }
 
         .cell-arrow-icon {
@@ -949,36 +974,37 @@ export default function Certifications() {
           color: #6366f1;
         }
 
-        /* ── Column 3: Learning Roadmap (Compact & Balanced) ── */
+        /* ── Column 3: Learning Roadmap (Proper Structured Box & Full Card Items) ── */
         .roadmap-timeline-list {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 7px;
           position: relative;
-          margin-bottom: 16px;
+          margin-bottom: 12px;
           width: 100%;
         }
 
         .roadmap-row {
           display: flex;
-          align-items: flex-start;
-          gap: 10px;
+          align-items: center;
+          gap: 6px;
           position: relative;
+          width: 100%;
         }
 
         .roadmap-track-col {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 14px;
+          justify-content: center;
+          width: 12px;
           flex-shrink: 0;
-          padding-top: 4px;
           position: relative;
         }
 
         .roadmap-dot {
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           border: 2px solid #ffffff;
           box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.3);
@@ -988,61 +1014,106 @@ export default function Certifications() {
 
         .roadmap-v-line {
           position: absolute;
-          top: 14px;
+          top: 100%;
           width: 2px;
           background: #e2e8f0;
-          bottom: -12px;
+          height: 9px;
           z-index: 1;
         }
 
-        .roadmap-content-col {
-          flex: 1;
+        .roadmap-card-inner {
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px solid rgba(226, 232, 240, 0.95);
+          border-radius: 12px;
+          padding: 6px 8px;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: space-between;
-          gap: 8px;
+          gap: 6px;
+          flex: 1;
+          min-width: 0;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+        }
+
+        .roadmap-card-inner:hover {
+          background: #ffffff;
+          border-color: #cbd5e1;
+          transform: translateX(2px);
+          box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+        }
+
+        .roadmap-item-left {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          min-width: 0;
+        }
+
+        .roadmap-step-icon {
+          width: 24px;
+          height: 24px;
+          border-radius: 7px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .roadmap-info-col {
           min-width: 0;
         }
 
         .roadmap-step-title {
-          font-size: 0.8rem;
+          font-size: 0.77rem;
           font-weight: 800;
           color: #0f172a;
-          line-height: 1.25;
+          line-height: 1.2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .roadmap-step-sub {
-          font-size: 0.68rem;
+          font-size: 0.64rem;
           color: #64748b;
-          margin-top: 2px;
-          line-height: 1.3;
+          margin-top: 1px;
+          line-height: 1.25;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .roadmap-status-pill {
-          font-size: 0.62rem;
+          font-size: 0.58rem;
           font-weight: 800;
-          padding: 2px 7px;
+          padding: 2px 6px;
           border-radius: 100px;
           white-space: nowrap;
           flex-shrink: 0;
         }
 
+        .roadmap-bottom-container {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+        }
+
         /* Callout Card at bottom of Col 3 */
         .roadmap-callout-box {
-          background: rgba(255, 255, 255, 0.7);
+          background: rgba(255, 255, 255, 0.75);
           border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 14px;
-          padding: 12px 14px;
+          border-radius: 12px;
+          padding: 8px 10px;
           display: flex;
           align-items: center;
-          gap: 10px;
-          margin-top: auto;
+          gap: 8px;
         }
 
         .callout-target-bubble {
-          width: 32px;
-          height: 32px;
-          border-radius: 10px;
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
           background: rgba(99, 102, 241, 0.1);
           color: #6366f1;
           display: flex;
@@ -1052,13 +1123,13 @@ export default function Certifications() {
         }
 
         .callout-title {
-          font-size: 0.8rem;
+          font-size: 0.78rem;
           font-weight: 850;
           color: #0f172a;
         }
 
         .callout-sub {
-          font-size: 0.68rem;
+          font-size: 0.66rem;
           color: #64748b;
           margin-top: 1px;
           font-style: italic;
@@ -1071,26 +1142,26 @@ export default function Certifications() {
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.95);
           border-radius: 18px;
-          padding: 16px 24px;
+          padding: 16px 20px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 20px;
-          margin-top: 24px;
-          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+          gap: 16px;
+          margin-top: 22px;
+          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
           flex-wrap: wrap;
         }
 
         .banner-left-wrap {
           display: flex;
           align-items: center;
-          gap: 14px;
+          gap: 12px;
         }
 
         .banner-shield-bubble {
-          width: 38px;
-          height: 38px;
-          border-radius: 12px;
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
           background: rgba(99, 102, 241, 0.08);
           color: #6366f1;
           display: flex;
@@ -1100,29 +1171,29 @@ export default function Certifications() {
         }
 
         .banner-title {
-          font-size: 0.94rem;
+          font-size: 0.92rem;
           font-weight: 850;
           color: #0f172a;
         }
 
         .banner-sub {
-          font-size: 0.75rem;
+          font-size: 0.74rem;
           color: #64748b;
-          margin-top: 2px;
+          margin-top: 1px;
         }
 
         .banner-btn {
-          padding: 9px 20px;
+          padding: 8px 18px;
           border-radius: 100px;
           background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
           color: #ffffff;
-          font-size: 0.82rem;
+          font-size: 0.8rem;
           font-weight: 800;
           border: none;
           cursor: pointer;
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 6px;
           text-decoration: none;
           box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
           transition: all 0.2s ease;
@@ -1156,8 +1227,8 @@ export default function Certifications() {
 
         .cert-modal-dialog {
           background: #ffffff;
-          border-radius: 22px;
-          max-width: 640px;
+          border-radius: 20px;
+          max-width: 620px;
           width: 100%;
           max-height: 88vh;
           overflow-y: auto;
@@ -1167,7 +1238,7 @@ export default function Certifications() {
         }
 
         .modal-header {
-          padding: 18px 22px;
+          padding: 16px 20px;
           border-bottom: 1px solid #f1f5f9;
           display: flex;
           align-items: center;
@@ -1176,8 +1247,8 @@ export default function Certifications() {
         }
 
         .modal-close-btn {
-          width: 32px;
-          height: 32px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
           background: #f1f5f9;
           border: none;
@@ -1195,11 +1266,11 @@ export default function Certifications() {
         }
 
         .modal-body {
-          padding: 22px;
+          padding: 20px;
         }
 
         .cert-fallback-card {
-          padding: 28px 22px;
+          padding: 26px 20px;
           background: linear-gradient(135deg, #fffbeb 0%, #ffffff 50%, #fef3c7 100%);
           border: 2px solid #fbbf24;
           border-radius: 14px;
@@ -1211,11 +1282,11 @@ export default function Certifications() {
         .cert-fallback-inner {
           border: 1px dashed #d97706;
           border-radius: 10px;
-          padding: 20px 16px;
+          padding: 18px 14px;
         }
 
         /* ── Responsive Breakpoints ── */
-        @media (max-width: 1100px) {
+        @media (max-width: 1024px) {
           .cert-3col-grid {
             grid-template-columns: 1fr 1fr;
           }
@@ -1227,8 +1298,8 @@ export default function Certifications() {
         @media (max-width: 768px) {
           .cert-page {
             padding-top: 110px;
-            padding-left: 16px;
-            padding-right: 16px;
+            padding-left: 12px;
+            padding-right: 12px;
           }
           .cert-3col-grid {
             grid-template-columns: 1fr;
@@ -1249,7 +1320,7 @@ export default function Certifications() {
           .cert-counter-card {
             flex: 1;
             min-width: 0;
-            padding: 10px 6px;
+            padding: 10px 4px;
           }
           .cert-toolbar {
             flex-direction: column;
@@ -1265,10 +1336,10 @@ export default function Certifications() {
             grid-template-columns: 1fr;
           }
           .counter-num {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
           }
           .counter-label {
-            font-size: 0.65rem;
+            font-size: 0.62rem;
           }
         }
       `}</style>
@@ -1302,7 +1373,7 @@ export default function Certifications() {
             {/* Stat 1: Academic Credentials */}
             <div className="cert-counter-card">
               <div className="counter-icon-bubble" style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563eb" }}>
-                <GraduationCap size={15} />
+                <GraduationCap size={14} />
               </div>
               <div className="counter-num">5</div>
               <div className="counter-label">Academic Credentials</div>
@@ -1311,7 +1382,7 @@ export default function Certifications() {
             {/* Stat 2: Skill Certifications */}
             <div className="cert-counter-card">
               <div className="counter-icon-bubble" style={{ background: "rgba(2, 132, 199, 0.08)", color: "#0284c7" }}>
-                <FileText size={15} />
+                <FileText size={14} />
               </div>
               <div className="counter-num">25+</div>
               <div className="counter-label">Skill Certifications</div>
@@ -1320,7 +1391,7 @@ export default function Certifications() {
             {/* Stat 3: Experience Letters */}
             <div className="cert-counter-card">
               <div className="counter-icon-bubble" style={{ background: "rgba(124, 58, 237, 0.08)", color: "#7c3aed" }}>
-                <Briefcase size={15} />
+                <Briefcase size={14} />
               </div>
               <div className="counter-num">2</div>
               <div className="counter-label">Experience Letters</div>
@@ -1329,7 +1400,7 @@ export default function Certifications() {
             {/* Stat 4: Courses & Achievements */}
             <div className="cert-counter-card">
               <div className="counter-icon-bubble" style={{ background: "rgba(225, 29, 72, 0.08)", color: "#e11d48" }}>
-                <Star size={15} />
+                <Star size={14} />
               </div>
               <div className="counter-num">10+</div>
               <div className="counter-label">Courses &amp; Achievements</div>
@@ -1370,7 +1441,7 @@ export default function Certifications() {
           </div>
 
           <div className="cert-search-wrap">
-            <Search size={14} className="search-icon-left" />
+            <Search size={13} className="search-icon-left" />
             <input 
               type="text" 
               className="cert-search-input" 
@@ -1379,9 +1450,9 @@ export default function Certifications() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             {searchQuery ? (
-              <X size={14} className="search-icon-right" onClick={() => setSearchQuery("")} />
+              <X size={13} className="search-icon-right" onClick={() => setSearchQuery("")} />
             ) : (
-              <SlidersHorizontal size={14} className="search-icon-right" />
+              <SlidersHorizontal size={13} className="search-icon-right" />
             )}
           </div>
         </div>
@@ -1389,13 +1460,13 @@ export default function Certifications() {
         {/* ── 3. MAIN 3-COLUMN PRIMARY SECTION ── */}
         <div className="cert-3col-grid">
 
-          {/* ════ COLUMN 1: ACADEMIC DEGREES (TIMELINE 100% INSIDE CARD) ════ */}
+          {/* ════ COLUMN 1: ACADEMIC DEGREES (SHIFTED LEFT, CLEAN) ════ */}
           <div className="cert-column-card">
             <div>
               <div className="column-header-row">
                 <div className="column-header-left">
                   <div className="column-icon-bubble" style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563eb" }}>
-                    <GraduationCap size={20} />
+                    <GraduationCap size={18} />
                   </div>
                   <div>
                     <h2 className="column-title-text">Academic Degrees</h2>
@@ -1434,7 +1505,7 @@ export default function Certifications() {
                           </div>
                         </div>
                         <button className="academic-eye-btn" title="View Credential">
-                          <Eye size={13} />
+                          <Eye size={12} />
                         </button>
                       </div>
                     </div>
@@ -1450,7 +1521,7 @@ export default function Certifications() {
               style={{ background: "#eff6ff", color: "#2563eb" }}
             >
               <span>View Academic Journey</span>
-              <ChevronRight size={14} />
+              <ChevronRight size={13} />
             </Link>
           </div>
 
@@ -1460,7 +1531,7 @@ export default function Certifications() {
               <div className="column-header-row">
                 <div className="column-header-left">
                   <div className="column-icon-bubble" style={{ background: "rgba(16, 185, 129, 0.08)", color: "#059669" }}>
-                    <Award size={20} />
+                    <Award size={18} />
                   </div>
                   <div>
                     <h2 className="column-title-text">Skill-Based Certifications</h2>
@@ -1500,7 +1571,7 @@ export default function Certifications() {
                         {cat.iconsList.includes("github") && <GithubLogo />}
                         {cat.iconsList.includes("docker") && <DockerLogo />}
                       </div>
-                      <ChevronRight size={14} className="cell-arrow-icon" />
+                      <ChevronRight size={13} className="cell-arrow-icon" />
                     </div>
                   </div>
                 ))}
@@ -1514,26 +1585,29 @@ export default function Certifications() {
               onClick={() => openCategoryModal(skillCategories[0])}
             >
               <span>View All Certifications (25+)</span>
-              <ChevronRight size={14} />
+              <ChevronRight size={13} />
             </button>
           </div>
 
-          {/* ════ COLUMN 3: LEARNING ROADMAP (BALANCED HEIGHT) ════ */}
+          {/* ════ COLUMN 3: LEARNING ROADMAP (PROPER COMPLETE BOX) ════ */}
           <div className="cert-column-card">
             <div>
               <div className="column-header-row">
                 <div className="column-header-left">
-                  <div className="column-icon-bubble" style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563eb" }}>
-                    <TrendingUp size={20} />
+                  <div className="column-icon-bubble" style={{ background: "rgba(99, 102, 241, 0.08)", color: "#6366f1" }}>
+                    <TrendingUp size={18} />
                   </div>
                   <div>
                     <h2 className="column-title-text">Learning Roadmap</h2>
-                    <p className="column-sub-text">A visual path of my continuous learning journey.</p>
+                    <p className="column-sub-text">Milestones of continuous technical growth.</p>
                   </div>
                 </div>
+                <span className="column-badge-pill" style={{ background: "rgba(99, 102, 241, 0.08)", color: "#6366f1" }}>
+                  5 Steps
+                </span>
               </div>
 
-              {/* Vertical Path */}
+              {/* Vertical Path with clean card items */}
               <div className="roadmap-timeline-list">
                 {roadmapSteps.map((step, idx) => (
                   <div key={step.id} className="roadmap-row">
@@ -1541,10 +1615,18 @@ export default function Certifications() {
                       <div className="roadmap-dot" style={{ background: step.dotColor }} />
                       {idx < roadmapSteps.length - 1 && <div className="roadmap-v-line" />}
                     </div>
-                    <div className="roadmap-content-col">
-                      <div>
-                        <div className="roadmap-step-title">{step.title}</div>
-                        <div className="roadmap-step-sub">{step.subtitle}</div>
+                    <div className="roadmap-card-inner">
+                      <div className="roadmap-item-left">
+                        <div 
+                          className="roadmap-step-icon" 
+                          style={{ background: `${step.dotColor}14`, color: step.dotColor }}
+                        >
+                          {step.icon}
+                        </div>
+                        <div className="roadmap-info-col">
+                          <div className="roadmap-step-title">{step.title}</div>
+                          <div className="roadmap-step-sub">{step.subtitle}</div>
+                        </div>
                       </div>
                       <span 
                         className="roadmap-status-pill" 
@@ -1558,15 +1640,25 @@ export default function Certifications() {
               </div>
             </div>
 
-            {/* Bottom Callout Quote Box */}
-            <div className="roadmap-callout-box">
-              <div className="callout-target-bubble">
-                <Target size={18} />
+            {/* Bottom Callout Quote Box & Action Button */}
+            <div className="roadmap-bottom-container">
+              <div className="roadmap-callout-box">
+                <div className="callout-target-bubble">
+                  <Target size={15} />
+                </div>
+                <div>
+                  <div className="callout-title">Same Learner. Bigger Goals.</div>
+                  <div className="callout-sub">Every certification is a milestone, not a destination.</div>
+                </div>
               </div>
-              <div>
-                <div className="callout-title">Same Learner. Bigger Goals.</div>
-                <div className="callout-sub">Every certification is a milestone, not a destination.</div>
-              </div>
+              <Link 
+                to="/experience" 
+                className="column-bottom-btn"
+                style={{ background: "#eff6ff", color: "#2563eb", marginTop: "8px" }}
+              >
+                <span>View Experience Milestones</span>
+                <ChevronRight size={13} />
+              </Link>
             </div>
           </div>
 
@@ -1576,7 +1668,7 @@ export default function Certifications() {
         <div className="cert-bottom-banner">
           <div className="banner-left-wrap">
             <div className="banner-shield-bubble">
-              <Shield size={20} />
+              <Shield size={18} />
             </div>
             <div>
               <div className="banner-title">Let's build something amazing together.</div>
@@ -1586,7 +1678,7 @@ export default function Certifications() {
 
           <Link to="/contact" className="banner-btn">
             <span>Get In Touch</span>
-            <ArrowRight size={14} />
+            <ArrowRight size={13} />
           </Link>
         </div>
 
