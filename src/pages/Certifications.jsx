@@ -7,6 +7,8 @@ import {
   Layout, Server, Database, Brain, Cpu, Cloud, Code, Terminal, Shield, Target, TrendingUp,
   Rocket
 } from "lucide-react";
+import AuthenticCertificate from "../components/AuthenticCertificate";
+import { allSkillCertificates } from "../data/certificatesData";
 
 // ── SVG Brand & University Logos ──
 function HBTULogo({ size = 26 }) {
@@ -123,7 +125,8 @@ export default function Certifications() {
       institution: "Shanti Niketan H.S. School",
       result: "80%",
       logo: <SchoolCrestLogo text="SN" />,
-      color: "#ea580c"
+      color: "#ea580c",
+      isAcademic: true
     },
     {
       id: "12th",
@@ -132,7 +135,8 @@ export default function Certifications() {
       institution: "SMY Inter College",
       result: "90%",
       logo: <InterCollegeLogo />,
-      color: "#dc2626"
+      color: "#dc2626",
+      isAcademic: true
     },
     {
       id: "bsc",
@@ -141,7 +145,8 @@ export default function Certifications() {
       institution: "Allahabad State University",
       result: "1st Division",
       logo: <AllahabadUniLogo />,
-      color: "#1e3a8a"
+      color: "#1e3a8a",
+      isAcademic: true
     },
     {
       id: "mca",
@@ -150,7 +155,8 @@ export default function Certifications() {
       institution: "Harcourt Butler Technical University (HBTU)",
       result: "7.5 CGPA",
       logo: <HBTULogo />,
-      color: "#991b1b"
+      color: "#991b1b",
+      isAcademic: true
     },
     {
       id: "academic-specialization",
@@ -159,7 +165,8 @@ export default function Certifications() {
       institution: "HBTU Technical Department",
       result: "Academic Excellence",
       logo: <HBTULogo />,
-      color: "#7c3aed"
+      color: "#7c3aed",
+      isAcademic: true
     }
   ];
 
@@ -173,12 +180,7 @@ export default function Certifications() {
       color: "#3b82f6",
       icon: <Layout size={15} />,
       iconsList: ["udemy", "google", "coursera"],
-      certs: [
-        { title: "React – The Complete Guide", issuer: "Udemy", date: "Mar 2024", id: "REACT-UDE" },
-        { title: "JavaScript – Advanced Concepts", issuer: "Coursera", date: "Jan 2024", id: "JS-ADV" },
-        { title: "Next.js & Modern Web Architecture", issuer: "Udemy", date: "Jun 2023", id: "NEXT-MAST" },
-        { title: "Responsive Web Design & Modern CSS", issuer: "freeCodeCamp", date: "Apr 2023", id: "FCC-CSS" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "frontend")
     },
     {
       id: "backend",
@@ -188,12 +190,7 @@ export default function Certifications() {
       color: "#10b981",
       icon: <Server size={15} />,
       iconsList: ["node", "express", "nest"],
-      certs: [
-        { title: "Node.js & Express Backend Development", issuer: "Udemy", date: "Feb 2024", id: "NODE-EXP" },
-        { title: "NestJS Enterprise Backend Masterclass", issuer: "Udemy", date: "Dec 2023", id: "NEST-ENT" },
-        { title: "Building Scalable REST APIs", issuer: "Coursera", date: "Nov 2023", id: "REST-API" },
-        { title: "Backend Authentication & Security", issuer: "Coursera", date: "Aug 2023", id: "AUTH-SEC" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "backend")
     },
     {
       id: "database",
@@ -203,11 +200,7 @@ export default function Certifications() {
       color: "#2563eb",
       icon: <Database size={15} />,
       iconsList: ["mongo", "postgres", "redis"],
-      certs: [
-        { title: "SQL for Data Science", issuer: "Great Learning", date: "Nov 2023", id: "SQL-DS" },
-        { title: "MongoDB Certified Associate Developer", issuer: "MongoDB University", date: "Aug 2023", id: "MONGO-DEV" },
-        { title: "PostgreSQL & Database Design", issuer: "Udemy", date: "Jul 2023", id: "PG-DES" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "database")
     },
     {
       id: "aiml",
@@ -217,13 +210,7 @@ export default function Certifications() {
       color: "#8b5cf6",
       icon: <Brain size={15} />,
       iconsList: ["openai", "google", "coursera"],
-      certs: [
-        { title: "Deep Learning Specialization", issuer: "DeepLearning.AI", date: "Feb 2024", id: "DL-SPEC" },
-        { title: "Generative AI Fundamentals", issuer: "Coursera", date: "Jan 2024", id: "GEN-AI" },
-        { title: "Building AI Agents with LangChain", issuer: "DeepLearning.AI", date: "Dec 2023", id: "AGENT-LC" },
-        { title: "Retrieval Augmented Generation (RAG)", issuer: "Udemy", date: "Nov 2023", id: "RAG-SYS" },
-        { title: "AI for Everyone", issuer: "DeepLearning.AI", date: "Sep 2023", id: "AI-EVERY" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "aiml")
     },
     {
       id: "aitools",
@@ -233,12 +220,7 @@ export default function Certifications() {
       color: "#6366f1",
       icon: <Cpu size={15} />,
       iconsList: ["openai", "google", "github"],
-      certs: [
-        { title: "Google Gemini Multi-Modal Masterclass", issuer: "Google Cloud", date: "Mar 2024", id: "GEMINI-AI" },
-        { title: "GitHub Copilot Developer Productivity", issuer: "Microsoft", date: "Feb 2024", id: "COPILOT-MS" },
-        { title: "ChatGPT Prompt Engineering for Developers", issuer: "OpenAI", date: "Dec 2023", id: "PROMPT-ENG" },
-        { title: "Claude 3 & Anthropic API Workflows", issuer: "Coursera", date: "Nov 2023", id: "CLAUDE-API" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "aitools")
     },
     {
       id: "cloud",
@@ -248,11 +230,7 @@ export default function Certifications() {
       color: "#0284c7",
       icon: <Cloud size={15} />,
       iconsList: ["github", "docker", "google"],
-      certs: [
-        { title: "Docker Essentials & Containers", issuer: "Coursera", date: "Jul 2023", id: "DOCKER-CONT" },
-        { title: "Version Control with Git & GitHub", issuer: "Coursera", date: "Sep 2023", id: "GIT-GH" },
-        { title: "Cloud Deployment with Vercel & Firebase", issuer: "Udemy", date: "May 2023", id: "CLOUD-DEP" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "cloud")
     },
     {
       id: "corecs",
@@ -262,12 +240,7 @@ export default function Certifications() {
       color: "#06b6d4",
       icon: <Code size={15} />,
       iconsList: ["udemy", "coursera"],
-      certs: [
-        { title: "Data Structures & Algorithms in C++", issuer: "Scaler Academy", date: "Oct 2023", id: "DSA-CPP" },
-        { title: "Operating Systems & Concurrency", issuer: "Coursera", date: "Aug 2023", id: "OS-SYS" },
-        { title: "Database Management Systems (DBMS)", issuer: "HBTU Kanpur", date: "May 2024", id: "DBMS-HBTU" },
-        { title: "Computer Networks & Protocols", issuer: "Coursera", date: "Jun 2023", id: "CN-PROTO" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "corecs")
     },
     {
       id: "software",
@@ -277,11 +250,7 @@ export default function Certifications() {
       color: "#0d9488",
       icon: <Terminal size={15} />,
       iconsList: ["github", "google"],
-      certs: [
-        { title: "Postman API Testing & Automation", issuer: "Postman Academy", date: "Nov 2023", id: "POSTMAN-API" },
-        { title: "Linux Command Line & Bash Scripting", issuer: "Udemy", date: "Sep 2023", id: "LINUX-BASH" },
-        { title: "Agile & Jira Project Management", issuer: "Atlassian", date: "Jul 2023", id: "JIRA-AGILE" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "software")
     },
     {
       id: "others",
@@ -291,11 +260,7 @@ export default function Certifications() {
       color: "#a855f7",
       icon: <Shield size={15} />,
       iconsList: ["coursera", "udemy"],
-      certs: [
-        { title: "Cybersecurity Fundamentals", issuer: "Cisco Networking Academy", date: "Jan 2024", id: "CISCO-SEC" },
-        { title: "Software Testing & QA Automation", issuer: "Coursera", date: "Nov 2023", id: "QA-TEST" },
-        { title: "System Design for High Scalability", issuer: "Educative", date: "Oct 2023", id: "SYS-DES" }
-      ]
+      certs: allSkillCertificates.filter(c => c.category === "others")
     }
   ];
 
@@ -1687,59 +1652,93 @@ export default function Certifications() {
       {/* ── 5. SINGLE CERTIFICATE LIGHTBOX MODAL ── */}
       {selectedCert && (
         <div className="cert-modal-backdrop" onClick={() => setSelectedCert(null)}>
-          <div className="cert-modal-dialog" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <CheckCircle2 size={20} color="#059669" />
-                <div>
-                  <h3 style={{ margin: 0, fontSize: "1.02rem", fontWeight: 800, color: "#0f172a" }}>
-                    {selectedCert.title}
-                  </h3>
-                  <div style={{ fontSize: "0.75rem", color: "#64748b" }}>
-                    {selectedCert.institution || selectedCert.issuer} {selectedCert.year ? `• ${selectedCert.year}` : ""}
-                  </div>
-                </div>
-              </div>
-              <button className="modal-close-btn" onClick={() => setSelectedCert(null)}>
-                <X size={16} />
-              </button>
-            </div>
-
-            <div className="modal-body">
-              <div className="cert-fallback-card">
-                <div className="cert-fallback-inner">
-                  <div style={{ fontSize: "0.7rem", fontWeight: 850, letterSpacing: "2px", color: "#b45309", textTransform: "uppercase", marginBottom: "6px" }}>
-                    Verified Academic Credential
-                  </div>
-                  <div style={{ fontSize: "1.25rem", fontWeight: 900, color: "#0f172a", marginBottom: "4px" }}>
-                    {selectedCert.title}
-                  </div>
-                  <div style={{ fontFamily: "Caveat, cursive", fontSize: "1.8rem", color: "#4f46e5", fontWeight: 700, margin: "6px 0" }}>
-                    Avaneesh Kumar
-                  </div>
-                  <div style={{ fontSize: "0.82rem", color: "#475569", fontWeight: 600 }}>
-                    Issued by {selectedCert.institution || selectedCert.issuer}
-                  </div>
-                  {selectedCert.result && (
-                    <div style={{ marginTop: "10px", display: "inline-block", padding: "4px 12px", background: "#fef3c7", borderRadius: "100px", color: "#92400e", fontWeight: 800, fontSize: "0.72rem" }}>
-                      Grade / Division: {selectedCert.result}
+          <div 
+            className="cert-modal-dialog" 
+            style={{ maxWidth: selectedCert.isAcademic ? "640px" : "840px", padding: selectedCert.isAcademic ? "0" : "10px" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {selectedCert.isAcademic ? (
+              <>
+                <div className="modal-header">
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <CheckCircle2 size={20} color="#059669" />
+                    <div>
+                      <h3 style={{ margin: 0, fontSize: "1.02rem", fontWeight: 800, color: "#0f172a" }}>
+                        {selectedCert.title}
+                      </h3>
+                      <div style={{ fontSize: "0.75rem", color: "#64748b" }}>
+                        {selectedCert.institution || selectedCert.issuer} {selectedCert.year ? `• ${selectedCert.year}` : ""}
+                      </div>
                     </div>
-                  )}
+                  </div>
+                  <button className="modal-close-btn" onClick={() => setSelectedCert(null)}>
+                    <X size={16} />
+                  </button>
                 </div>
-              </div>
-            </div>
 
-            <div style={{ padding: "12px 20px", borderTop: "1px solid #f1f5f9", display: "flex", alignItems: "center", justifyContent: "space-between", background: "#f8fafc" }}>
-              <span style={{ fontSize: "0.76rem", color: "#059669", fontWeight: 700, display: "flex", alignItems: "center", gap: "6px" }}>
-                <CheckCircle2 size={13} /> Official Verified Record
-              </span>
-              <button 
-                onClick={() => setSelectedCert(null)}
-                style={{ padding: "6px 14px", borderRadius: "8px", background: "#ffffff", border: "1px solid #cbd5e1", fontSize: "0.76rem", fontWeight: 700, cursor: "pointer" }}
-              >
-                Close
-              </button>
-            </div>
+                <div className="modal-body">
+                  <div className="cert-fallback-card">
+                    <div className="cert-fallback-inner">
+                      <div style={{ fontSize: "0.7rem", fontWeight: 850, letterSpacing: "2px", color: "#b45309", textTransform: "uppercase", marginBottom: "6px" }}>
+                        Official Academic Credential
+                      </div>
+                      <div style={{ fontSize: "1.25rem", fontWeight: 900, color: "#0f172a", marginBottom: "4px" }}>
+                        {selectedCert.title}
+                      </div>
+                      <div style={{ fontFamily: "Caveat, cursive", fontSize: "2rem", color: "#4f46e5", fontWeight: 700, margin: "6px 0" }}>
+                        Avaneesh Kumar
+                      </div>
+                      <div style={{ fontSize: "0.82rem", color: "#475569", fontWeight: 600 }}>
+                        Awarded by {selectedCert.institution || selectedCert.issuer}
+                      </div>
+                      {selectedCert.result && (
+                        <div style={{ marginTop: "10px", display: "inline-block", padding: "4px 12px", background: "#fef3c7", borderRadius: "100px", color: "#92400e", fontWeight: 800, fontSize: "0.72rem" }}>
+                          Division / Grade: {selectedCert.result}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ padding: "12px 20px", borderTop: "1px solid #f1f5f9", display: "flex", alignItems: "center", justifyContent: "space-between", background: "#f8fafc" }}>
+                  <span style={{ fontSize: "0.76rem", color: "#059669", fontWeight: 700, display: "flex", alignItems: "center", gap: "6px" }}>
+                    <CheckCircle2 size={13} /> Official Academic Record
+                  </span>
+                  <button 
+                    onClick={() => setSelectedCert(null)}
+                    style={{ padding: "6px 14px", borderRadius: "8px", background: "#ffffff", border: "1px solid #cbd5e1", fontSize: "0.76rem", fontWeight: 700, cursor: "pointer" }}
+                  >
+                    Close
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div style={{ padding: "14px 16px 16px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <div style={{ width: "28px", height: "28px", borderRadius: "8px", background: "rgba(99, 102, 241, 0.1)", color: "#6366f1", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Award size={16} />
+                    </div>
+                    <div>
+                      <h3 style={{ margin: 0, fontSize: "1.05rem", fontWeight: 850, color: "#0f172a" }}>
+                        {selectedCert.title}
+                      </h3>
+                      <div style={{ fontSize: "0.73rem", color: "#64748b" }}>
+                        Issued by {selectedCert.issuer} • {selectedCert.date || selectedCert.year}
+                      </div>
+                    </div>
+                  </div>
+                  <button className="modal-close-btn" onClick={() => setSelectedCert(null)}>
+                    <X size={16} />
+                  </button>
+                </div>
+
+                <AuthenticCertificate 
+                  cert={selectedCert} 
+                  onClose={() => setSelectedCert(null)} 
+                />
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -1779,11 +1778,19 @@ export default function Certifications() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    gap: "10px"
+                    gap: "10px",
+                    transition: "all 0.2s ease"
                   }}
                 >
-                  <div>
-                    <div style={{ fontSize: "0.82rem", fontWeight: 800, color: "#0f172a" }}>{cert.title}</div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap" }}>
+                      <span style={{ fontSize: "0.82rem", fontWeight: 800, color: "#0f172a" }}>{cert.title}</span>
+                      {cert.image && (
+                        <span style={{ fontSize: "0.6rem", padding: "1px 6px", borderRadius: "100px", background: "rgba(16, 185, 129, 0.1)", color: "#059669", fontWeight: 800 }}>
+                          Photo Verified
+                        </span>
+                      )}
+                    </div>
                     <div style={{ fontSize: "0.7rem", color: "#64748b", marginTop: "2px" }}>
                       {cert.issuer} • {cert.date} • ID: <code style={{ color: "#6366f1" }}>{cert.id}</code>
                     </div>
@@ -1791,29 +1798,26 @@ export default function Certifications() {
                   <button 
                     onClick={() => {
                       setCategoryModal(null);
-                      setSelectedCert({
-                        title: cert.title,
-                        issuer: cert.issuer,
-                        year: cert.date,
-                        result: "Verified Certificate"
-                      });
+                      setSelectedCert(cert);
                     }}
                     style={{
-                      padding: "5px 10px",
+                      padding: "5px 12px",
                       borderRadius: "8px",
-                      background: "#ffffff",
-                      border: "1px solid #cbd5e1",
+                      background: "linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)",
+                      border: "none",
                       fontSize: "0.74rem",
-                      fontWeight: 700,
-                      color: "#475569",
+                      fontWeight: 750,
+                      color: "#ffffff",
                       cursor: "pointer",
                       display: "flex",
                       alignItems: "center",
-                      gap: "4px"
+                      gap: "4px",
+                      flexShrink: 0,
+                      boxShadow: "0 2px 6px rgba(99, 102, 241, 0.25)"
                     }}
                   >
                     <Eye size={12} />
-                    <span>View</span>
+                    <span>View Certificate</span>
                   </button>
                 </div>
               ))}
