@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Avaneesh Kumar</title>
+  <style>
+    :root {
+      --text: #171717;
+      --text-muted: #555558;
+      --border: #e4e4e7;
+      --primary: #6d28d9;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      margin: 0;
+      padding: 40px;
+      background-color: #ffffff;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px 0;
+      font-weight: 850;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .contact-info a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 6px;
+      margin: 30px 0 15px 0;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .skill-row {
+      font-size: 0.95rem;
+    }
+
+    .skill-label {
+      font-weight: 750;
+      color: var(--text);
+    }
+
+    .exp-item, .edu-item {
+      margin-bottom: 20px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .item-title {
+      font-weight: 750;
+      font-size: 1.05rem;
+    }
+
+    .item-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .item-sub {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .actions-strip {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: #fafafa;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #f4f4f5;
+      border-color: #d4d4d8;
+    }
+
+    @media print {
+      .actions-strip {
+        display: none;
+      }
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-strip">
+    <button onclick="window.print()">Print Resume</button>
+    <button onclick="window.close()">Close Window</button>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <h1>Avaneesh Kumar</h1>
+      <div class="contact-info">
+        <span>Location: Noida, Uttar Pradesh</span>
+        <span>Phone: <a href="tel:9140487098">9140487098</a></span>
+        <span>Email: <a href="mailto:jiavaneesh399@gmail.com">jiavaneesh399@gmail.com</a></span>
+        <span>GitHub: <a href="https://github.com/ji-avaneesh" target="_blank">github.com/ji-avaneesh</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Full Stack Developer | AI/GenAI | Agentic AI. MCA Graduate from HBTU Kanpur with a strong mathematical background (B.Sc. Mathematics, 1st Division). Hands-on experience building full-stack web applications, RESTful APIs, database architectures, and practical AI systems (LLMs, RAG, FAISS, Ollama). Experienced in React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, and Git workflows.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-label">Languages:</span> JavaScript, C, C++, Python, SQL, HTML5, CSS3</div>
+        <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, Next.js, Vite, Tailwind CSS, Responsive Design</div>
+        <div class="skill-row"><span class="skill-label">Backend:</span> Node.js, Express.js, NestJS, REST APIs, Socket.IO, WebSockets</div>
+        <div class="skill-row"><span class="skill-label">Databases:</span> MongoDB, PostgreSQL, MySQL, Redis, Firebase</div>
+        <div class="skill-row"><span class="skill-label">AI &amp; GenAI:</span> OpenAI, Gemini, LangChain, FAISS, Qdrant, Ollama, RAG, Agentic AI</div>
+        <div class="skill-row"><span class="skill-label">DevOps &amp; Cloud:</span> Git, GitHub, Docker, Vercel, Cloudinary, Razorpay</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Freelance Developer</span>
+          <span class="item-date">Mid July 2026 – Present</span>
+        </div>
+        <div class="item-sub">Independent / Client Projects — Remote / Noida, UP</div>
+        <ul>
+          <li>Developing custom full-stack web applications, automation tools, and landing pages for business clients.</li>
+          <li>Building AI/automation tools, chatbots, and intelligent LLM workflows tailored to specific business use cases.</li>
+          <li>Leading end-to-end development cycle: client requirement analysis, UI design, API development, and cloud deployment.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Cloud Kitchen Service</span>
+          <span class="item-date">Jan 2026 – July 2026</span>
+        </div>
+        <div class="item-sub">Software Engineer Intern — Order Processing + Inventory Tracking (Noida, UP)</div>
+        <ul>
+          <li>Developed real-time ordering pipelines, transaction logs, and status tracker using WebSockets.</li>
+          <li>Created a clean kitchen dispatch UI displaying active order logs sequentially for kitchen staff.</li>
+          <li>Configured Redis caching layers for inventory state, significantly reducing database read latencies.</li>
+          <li>Engineered automatic inventory sync and real-time status propagation for kitchen dispatches.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">VPN Digital Services Pvt. Ltd.</span>
+          <span class="item-date">Aug 2025 – Mid Jan 2026</span>
+        </div>
+        <div class="item-sub">Full Stack Developer Intern — Cyber Kavach Web (Team of 4 · Noida, UP)</div>
+        <ul>
+          <li>Developed responsive web interfaces using React.js, JavaScript, HTML5, and CSS3 for the Cyber Kavach platform.</li>
+          <li>Built and integrated RESTful APIs using Node.js and Express.js for frontend-backend communication.</li>
+          <li>Implemented MongoDB-based CRUD operations, data schemas, and database-driven application workflows.</li>
+          <li>Integrated application security checks, payload validation, and robust error-handling pipelines.</li>
+          <li>Collaborated in an Agile team of 4 using Git and GitHub for version control, code reviews, and PR management.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">ANR Book Store</span>
+          <span class="item-date"><a href="https://github.com/anrpvtltd/ANR-Book-Store" target="_blank">GitHub</a></span>
+        </div>
+        <ul>
+          <li>Full-stack digital bookstore supporting catalog search, shopping cart persistence, and secure checkout flows.</li>
+          <li>Built using React, Node.js, Express, MongoDB, and REST APIs with JWT authentication.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">CleanX</span>
+          <span class="item-date"><a href="https://github.com/anrpvtltd/CleanX" target="_blank">GitHub</a></span>
+        </div>
+        <ul>
+          <li>Developer disk utility and file cleaner designed to locate duplicate files, purge temporary caches, and audit storage.</li>
+          <li>Built using C++, Node.js, and File System APIs.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">ANR ChatPDF AI Assistant</span>
+          <span class="item-date"><a href="https://github.com/ji-avaneesh/pdf-ai-assistant" target="_blank">GitHub</a></span>
+        </div>
+        <ul>
+          <li>AI-powered document intelligence tool enabling semantic search, conversational Q&amp;A, and outline summaries from PDFs.</li>
+          <li>Built with Next.js, React, Gemini API, and vector search indexing.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Aura AI — Personal AI OS</span>
+          <span class="item-date"><a href="https://github.com/anrpvtltd/Aura-Ai" target="_blank">GitHub</a></span>
+        </div>
+        <ul>
+          <li>Personal AI OS coordinating tasks, contextual memory, and scheduled workflows using Node.js, PostgreSQL, Redis, and Ollama.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">Harcourt Butler Technical University (HBTU), Kanpur</span>
+          <span class="item-date">2023 – 2025</span>
+        </div>
+        <div class="item-sub">Master of Computer Applications (MCA) — CGPA: 7.5 / 10</div>
+      </div>
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">Allahabad State University, Prayagraj</span>
+          <span class="item-date">2016 – 2019</span>
+        </div>
+        <div class="item-sub">Bachelor of Science (B.Sc.) in Mathematics — First Division</div>
+      </div>
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">SMY Inter College</span>
+          <span class="item-date">2016</span>
+        </div>
+        <div class="item-sub">Intermediate / 12th (Mathematics) — 90%</div>
+      </div>
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">Shanti Niketan H.S. School</span>
+          <span class="item-date">2014</span>
+        </div>
+        <div class="item-sub">High School / 10th — 80%</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>JavaScript Algorithms and Data Structures – freeCodeCamp</li>
+        <li>Frontend Development – Coursera</li>
+        <li>Data Structures and Algorithms – Scaler</li>
+        <li>C++ Programming – Scaler</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Custom Keyframe Animations */
+
+@keyframes float-blob-1 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95) rotate(240deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes float-blob-2 {
+  0% {
+    transform: translate(0px, 0px) scale(1.1) rotate(360deg);
+  }
+  50% {
+    transform: translate(-40px, 60px) scale(0.9) rotate(180deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1.1) rotate(0deg);
+  }
+}
+
+@keyframes float-blob-3 {
+  0% {
+    transform: translate(0px, 0px) scale(0.9) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.15) rotate(180deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.9) rotate(360deg);
+  }
+}
+
+@keyframes morph-orb {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 50% 50% / 50% 60% 40% 50%;
+  }
+  100% {
+    border-radius: 50% 50% 70% 30% / 40% 40% 60% 60%;
+  }
+}
+
+.animate-morph-orb {
+  animation: morph-orb 8s ease-in-out infinite alternate;
+}

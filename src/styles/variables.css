@@ -1,0 +1,38 @@
+:root {
+  /* Color Palette - Light Frosted Pastel Theme */
+  --bg: #f7f5f1;
+  --surface: rgba(255, 255, 255, 0.55);
+  --surface-strong: rgba(255, 255, 255, 0.72);
+  
+  --text: #171717;
+  --text-muted: #6f6f73;
+  --text-muted-light: #9e9ea2;
+  
+  --violet: #a78bfa;
+  --violet-rgb: 167, 139, 250;
+  --pink: #f3a6c8;
+  --pink-rgb: 243, 166, 200;
+  --peach: #f6c6a5;
+  --peach-rgb: 246, 198, 165;
+  --mint: #a8d8c0;
+  --mint-rgb: 168, 216, 192;
+  
+  --border: rgba(255, 255, 255, 0.7);
+  --border-dark: rgba(0, 0, 0, 0.05);
+  
+  --shadow: 0 20px 60px rgba(80, 70, 60, 0.10);
+  --shadow-sm: 0 4px 10px rgba(80, 70, 60, 0.04);
+  --shadow-lg: 0 30px 70px rgba(80, 70, 60, 0.15);
+  
+  /* Layout & Geometry */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px; /* 18px-28px target */
+  --radius-xl: 32px;
+  
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

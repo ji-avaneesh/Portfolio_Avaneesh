@@ -1,0 +1,67 @@
+/* Liquid Fluid Shapes & Ripple Effects */
+
+.liquid-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.liquid-svg-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Base Blob styling */
+.liquid-blob {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: url(#liquid-goo) blur(10px);
+  opacity: 0.25;
+  will-change: transform;
+}
+
+.blob-violet {
+  background: radial-gradient(circle, var(--violet) 0%, rgba(var(--violet-rgb), 0.2) 80%);
+  animation: float-blob-1 25s infinite alternate ease-in-out;
+}
+
+.blob-pink {
+  background: radial-gradient(circle, var(--pink) 0%, rgba(var(--pink-rgb), 0.2) 80%);
+  animation: float-blob-2 28s infinite alternate ease-in-out;
+}
+
+.blob-peach {
+  background: radial-gradient(circle, var(--peach) 0%, rgba(var(--peach-rgb), 0.2) 80%);
+  animation: float-blob-3 22s infinite alternate ease-in-out;
+}
+
+/* Pointer Ripple styles */
+.ripple-element {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--violet-rgb), 0.15) 0%, transparent 70%);
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ripple-active {
+  animation: ripple-wave 0.8s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+@keyframes ripple-wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
