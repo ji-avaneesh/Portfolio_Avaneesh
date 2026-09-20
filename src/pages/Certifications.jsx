@@ -351,12 +351,12 @@ export default function Certifications() {
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
         .cert-page {
-          padding-top: 116px;
-          padding-bottom: 60px;
-          max-width: 1160px;
+          padding-top: 130px;
+          padding-bottom: 90px;
+          max-width: 1240px;
           margin: 0 auto;
-          padding-left: 12px;
-          padding-right: 12px;
+          padding-left: 24px;
+          padding-right: 24px;
           width: 100%;
           box-sizing: border-box;
           font-family: 'Outfit', sans-serif;
@@ -368,33 +368,40 @@ export default function Certifications() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 20px;
-          margin-bottom: 24px;
+          gap: 28px;
+          margin-bottom: 34px;
           flex-wrap: wrap;
         }
 
         .cert-hero-left {
-          flex: 1.1;
-          min-width: 300px;
+          flex: 1.15;
+          min-width: 320px;
         }
 
         .cert-pill-badge {
-          display: inline-block;
-          font-size: 0.72rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 5px 14px;
+          border-radius: 100px;
+          background: rgba(99, 102, 241, 0.08);
+          border: 1px solid rgba(99, 102, 241, 0.25);
+          color: #4f46e5;
+          font-size: 0.76rem;
           font-weight: 850;
-          letter-spacing: 1.4px;
-          color: #64748b;
+          letter-spacing: 1.2px;
           text-transform: uppercase;
-          margin-bottom: 6px;
+          margin-bottom: 12px;
         }
 
         .cert-hero-title {
-          font-size: 2.35rem;
+          font-size: clamp(2.4rem, 3.8vw, 2.9rem);
           font-weight: 900;
-          line-height: 1.12;
+          line-height: 1.15;
           letter-spacing: -0.8px;
           color: #0f172a;
-          margin: 0 0 8px 0;
+          margin: 0 0 10px 0;
+          font-family: 'Outfit', sans-serif;
         }
 
         .cert-hero-title .highlight-word {
@@ -405,65 +412,65 @@ export default function Certifications() {
         }
 
         .cert-hero-desc {
-          font-size: 0.92rem;
-          line-height: 1.55;
+          font-size: 1.02rem;
+          line-height: 1.65;
           color: #64748b;
           margin: 0;
-          max-width: 500px;
+          max-width: 540px;
         }
 
         /* ── Center Quote Box ── */
         .cert-quote-box {
-          flex: 0.9;
-          min-width: 240px;
-          background: rgba(255, 255, 255, 0.8);
+          flex: 0.95;
+          min-width: 260px;
+          background: rgba(255, 255, 255, 0.85);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.95);
-          border-radius: 18px;
-          padding: 14px 18px;
-          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+          border-radius: 20px;
+          padding: 18px 22px;
+          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
           box-sizing: border-box;
           position: relative;
         }
 
         .cert-quote-mark {
-          font-size: 2.6rem;
+          font-size: 2.8rem;
           line-height: 0.8;
-          color: #93c5fd;
+          color: #818cf8;
           font-family: serif;
-          margin-bottom: 4px;
+          margin-bottom: 6px;
         }
 
         .cert-quote-text {
-          font-size: 0.84rem;
-          line-height: 1.45;
-          color: #334155;
+          font-size: 0.92rem;
+          line-height: 1.5;
+          color: #1e293b;
           font-style: italic;
-          margin: 0 0 6px 0;
+          margin: 0 0 8px 0;
         }
 
         .cert-quote-author {
-          font-size: 0.74rem;
-          font-weight: 700;
+          font-size: 0.78rem;
+          font-weight: 750;
           color: #64748b;
         }
 
         /* ── Right 4 Counter Cards ── */
         .cert-counters-row {
           display: flex;
-          gap: 10px;
+          gap: 12px;
           align-items: center;
         }
 
         .cert-counter-card {
-          background: rgba(255, 255, 255, 0.82);
+          background: rgba(255, 255, 255, 0.85);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.95);
-          border-radius: 16px;
-          padding: 12px 10px;
-          min-width: 78px;
+          border-radius: 18px;
+          padding: 14px 12px;
+          min-width: 86px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -474,32 +481,32 @@ export default function Certifications() {
 
         .cert-counter-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
         }
 
         .counter-icon-bubble {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
+          width: 34px;
+          height: 34px;
+          border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
         }
 
         .counter-num {
-          font-size: 1.3rem;
+          font-size: 1.35rem;
           font-weight: 900;
           color: #0f172a;
           line-height: 1.1;
         }
 
         .counter-label {
-          font-size: 0.68rem;
-          font-weight: 700;
+          font-size: 0.72rem;
+          font-weight: 750;
           color: #475569;
-          margin-top: 2px;
-          line-height: 1.2;
+          margin-top: 3px;
+          line-height: 1.25;
         }
 
         /* ── Single-Row Toolbar (Filters + Search on Same Line) ── */
@@ -507,15 +514,15 @@ export default function Certifications() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 14px;
-          margin-bottom: 22px;
+          gap: 16px;
+          margin-bottom: 26px;
           width: 100%;
         }
 
         .cert-filters-list {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 8px;
           flex: 1;
           min-width: 0;
           overflow-x: auto;
@@ -530,9 +537,9 @@ export default function Certifications() {
         }
 
         .filter-pill-btn {
-          padding: 6px 13px;
+          padding: 8px 16px;
           border-radius: 100px;
-          font-size: 0.76rem;
+          font-size: 0.80rem;
           font-weight: 750;
           cursor: pointer;
           border: 1px solid transparent;
@@ -540,7 +547,7 @@ export default function Certifications() {
           background: rgba(255, 255, 255, 0.85);
           color: #475569;
           border-color: rgba(226, 232, 240, 0.9);
-          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+          box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
           flex-shrink: 0;
         }
 
@@ -548,18 +555,19 @@ export default function Certifications() {
           background: #ffffff;
           color: #0f172a;
           border-color: #cbd5e1;
+          transform: translateY(-1px);
         }
 
         .filter-pill-btn.active {
-          background: #6366f1;
+          background: #4f46e5;
           color: #ffffff;
-          border-color: #6366f1;
-          box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+          border-color: #4f46e5;
+          box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
         }
 
         .cert-search-wrap {
           position: relative;
-          width: 220px;
+          width: 240px;
           flex-shrink: 0;
           display: flex;
           align-items: center;
@@ -567,15 +575,15 @@ export default function Certifications() {
 
         .cert-search-input {
           width: 100%;
-          padding: 6px 32px 6px 30px;
+          padding: 8px 34px 8px 32px;
           border-radius: 100px;
           background: rgba(255, 255, 255, 0.85);
           border: 1px solid rgba(226, 232, 240, 0.9);
-          font-size: 0.78rem;
+          font-size: 0.82rem;
           color: #0f172a;
           outline: none;
           transition: all 0.2s ease;
-          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+          box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
         }
 
         .cert-search-input:focus {
@@ -586,23 +594,23 @@ export default function Certifications() {
 
         .search-icon-left {
           position: absolute;
-          left: 10px;
+          left: 11px;
           color: #94a3b8;
           pointer-events: none;
         }
 
         .search-icon-right {
           position: absolute;
-          right: 10px;
+          right: 11px;
           color: #64748b;
           cursor: pointer;
         }
 
-        /* ── 3-COLUMN PRIMARY GRID (Balanced & Non-Overflowing) ── */
+        /* ── 3-COLUMN PRIMARY GRID (Balanced, Spacious & Non-Overflowing) ── */
         .cert-3col-grid {
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr) minmax(0, 1fr);
-          gap: 12px;
+          gap: 20px;
           align-items: stretch;
           width: 100%;
           box-sizing: border-box;
@@ -613,9 +621,9 @@ export default function Certifications() {
           backdrop-filter: blur(24px);
           -webkit-backdrop-filter: blur(24px);
           border: 1px solid rgba(255, 255, 255, 0.95);
-          border-radius: 18px;
-          padding: 16px 12px;
-          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.035);
+          border-radius: 22px;
+          padding: 22px 18px;
+          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -626,28 +634,28 @@ export default function Certifications() {
 
         .cert-column-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+          box-shadow: 0 16px 36px rgba(15, 23, 42, 0.07);
         }
 
         .column-header-row {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
-          gap: 8px;
-          margin-bottom: 12px;
+          gap: 10px;
+          margin-bottom: 16px;
         }
 
         .column-header-left {
           display: flex;
           align-items: flex-start;
-          gap: 8px;
+          gap: 10px;
           min-width: 0;
         }
 
         .column-icon-bubble {
-          width: 32px;
-          height: 32px;
-          border-radius: 9px;
+          width: 38px;
+          height: 38px;
+          border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -655,7 +663,7 @@ export default function Certifications() {
         }
 
         .column-title-text {
-          font-size: 0.98rem;
+          font-size: 1.12rem;
           font-weight: 850;
           color: #0f172a;
           margin: 0;
@@ -666,40 +674,40 @@ export default function Certifications() {
         }
 
         .column-sub-text {
-          font-size: 0.7rem;
+          font-size: 0.76rem;
           color: #64748b;
-          margin: 2px 0 0 0;
-          line-height: 1.3;
+          margin: 3px 0 0 0;
+          line-height: 1.35;
         }
 
         .column-badge-pill {
-          padding: 2px 7px;
+          padding: 3px 9px;
           border-radius: 100px;
-          font-size: 0.68rem;
+          font-size: 0.72rem;
           font-weight: 800;
           flex-shrink: 0;
         }
 
-        /* ── Column 1: Academic Degrees (Shifted Left, 100% Inside) ── */
+        /* ── Column 1: Academic Degrees (Balanced, Readable & Left-Aligned) ── */
         .academic-timeline-list {
           display: flex;
           flex-direction: column;
-          gap: 7px;
-          margin-bottom: 12px;
+          gap: 9px;
+          margin-bottom: 16px;
           width: 100%;
         }
 
         .academic-row {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 6px;
           width: 100%;
         }
 
         .academic-year-col {
-          width: 44px;
+          width: 48px;
           text-align: left;
-          font-size: 0.67rem;
+          font-size: 0.74rem;
           font-weight: 800;
           color: #64748b;
           flex-shrink: 0;
@@ -708,7 +716,7 @@ export default function Certifications() {
         }
 
         .academic-track-col {
-          width: 12px;
+          width: 14px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -718,8 +726,8 @@ export default function Certifications() {
         }
 
         .academic-dot {
-          width: 8px;
-          height: 8px;
+          width: 9px;
+          height: 9px;
           border-radius: 50%;
           border: 2px solid #ffffff;
           box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
@@ -732,7 +740,7 @@ export default function Certifications() {
           width: 2px;
           background: #e2e8f0;
           top: 100%;
-          height: 9px;
+          height: 11px;
           z-index: 1;
         }
 
@@ -744,28 +752,28 @@ export default function Certifications() {
         .academic-card-inner {
           background: rgba(255, 255, 255, 0.85);
           border: 1px solid rgba(226, 232, 240, 0.95);
-          border-radius: 12px;
-          padding: 6px 8px;
+          border-radius: 14px;
+          padding: 8px 10px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 6px;
+          gap: 8px;
           transition: all 0.2s ease;
           cursor: pointer;
-          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+          box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
         }
 
         .academic-card-inner:hover {
           background: #ffffff;
           border-color: #cbd5e1;
           transform: translateX(2px);
-          box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+          box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
         }
 
         .academic-item-left {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 8px;
           min-width: 0;
         }
 
@@ -777,8 +785,8 @@ export default function Certifications() {
         }
 
         .academic-degree-name {
-          font-size: 0.77rem;
-          font-weight: 800;
+          font-size: 0.84rem;
+          font-weight: 850;
           color: #0f172a;
           white-space: nowrap;
           overflow: hidden;
@@ -786,7 +794,7 @@ export default function Certifications() {
         }
 
         .academic-inst-name {
-          font-size: 0.66rem;
+          font-size: 0.72rem;
           color: #64748b;
           white-space: nowrap;
           overflow: hidden;
@@ -794,16 +802,16 @@ export default function Certifications() {
         }
 
         .academic-result-pill {
-          font-size: 0.62rem;
-          font-weight: 700;
+          font-size: 0.66rem;
+          font-weight: 750;
           color: #475569;
-          margin-top: 1px;
+          margin-top: 2px;
         }
 
         .academic-eye-btn {
-          width: 24px;
-          height: 24px;
-          border-radius: 7px;
+          width: 26px;
+          height: 26px;
+          border-radius: 8px;
           background: #f8fafc;
           border: 1px solid #e2e8f0;
           color: #64748b;
@@ -823,10 +831,10 @@ export default function Certifications() {
 
         .column-bottom-btn {
           margin-top: auto;
-          padding: 8px 12px;
-          border-radius: 10px;
-          font-size: 0.78rem;
-          font-weight: 750;
+          padding: 10px 14px;
+          border-radius: 12px;
+          font-size: 0.82rem;
+          font-weight: 800;
           border: none;
           cursor: pointer;
           display: flex;
@@ -839,25 +847,25 @@ export default function Certifications() {
           width: 100%;
         }
 
-        /* ── Column 2: Skill Categories 3x3 Grid (Compact & Centered) ── */
+        /* ── Column 2: Skill Categories 3x3 Grid ── */
         .skill-categories-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 8px;
-          margin-bottom: 14px;
+          gap: 10px;
+          margin-bottom: 16px;
         }
 
         .skill-category-cell {
           background: rgba(255, 255, 255, 0.75);
           border: 1px solid rgba(226, 232, 240, 0.85);
-          border-radius: 11px;
-          padding: 8px 8px;
+          border-radius: 14px;
+          padding: 10px 10px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           cursor: pointer;
           transition: all 0.2s ease;
-          min-height: 94px;
+          min-height: 104px;
           box-sizing: border-box;
           min-width: 0;
         }
@@ -866,7 +874,7 @@ export default function Certifications() {
           background: #ffffff;
           border-color: #cbd5e1;
           transform: translateY(-2px);
-          box-shadow: 0 6px 14px rgba(99, 102, 241, 0.08);
+          box-shadow: 0 8px 18px rgba(99, 102, 241, 0.09);
         }
 
         .cell-top-row {
@@ -874,19 +882,19 @@ export default function Certifications() {
           align-items: flex-start;
           justify-content: space-between;
           gap: 4px;
-          margin-bottom: 4px;
+          margin-bottom: 5px;
         }
 
         .cell-title-wrap {
           display: flex;
           align-items: center;
-          gap: 4px;
+          gap: 5px;
           min-width: 0;
         }
 
         .cell-title {
-          font-size: 0.72rem;
-          font-weight: 800;
+          font-size: 0.78rem;
+          font-weight: 850;
           color: #0f172a;
           line-height: 1.2;
           white-space: nowrap;
@@ -895,9 +903,9 @@ export default function Certifications() {
         }
 
         .cell-count-badge {
-          font-size: 0.6rem;
+          font-size: 0.65rem;
           font-weight: 800;
-          padding: 1px 4px;
+          padding: 2px 5px;
           border-radius: 100px;
           background: rgba(16, 185, 129, 0.1);
           color: #059669;
@@ -905,10 +913,10 @@ export default function Certifications() {
         }
 
         .cell-subtext {
-          font-size: 0.63rem;
-          line-height: 1.3;
+          font-size: 0.68rem;
+          line-height: 1.35;
           color: #64748b;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -920,13 +928,13 @@ export default function Certifications() {
           align-items: center;
           justify-content: space-between;
           margin-top: auto;
-          padding-top: 2px;
+          padding-top: 3px;
         }
 
         .cell-icons-row {
           display: flex;
           align-items: center;
-          gap: 2px;
+          gap: 3px;
         }
 
         .cell-arrow-icon {
@@ -939,13 +947,13 @@ export default function Certifications() {
           color: #6366f1;
         }
 
-        /* ── Column 3: Learning Roadmap (Proper Structured Box & Full Card Items) ── */
+        /* ── Column 3: Learning Roadmap ── */
         .roadmap-timeline-list {
           display: flex;
           flex-direction: column;
-          gap: 7px;
+          gap: 9px;
           position: relative;
-          margin-bottom: 12px;
+          margin-bottom: 16px;
           width: 100%;
         }
 
@@ -962,14 +970,14 @@ export default function Certifications() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: 12px;
+          width: 14px;
           flex-shrink: 0;
           position: relative;
         }
 
         .roadmap-dot {
-          width: 8px;
-          height: 8px;
+          width: 9px;
+          height: 9px;
           border-radius: 50%;
           border: 2px solid #ffffff;
           box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.3);
@@ -982,43 +990,43 @@ export default function Certifications() {
           top: 100%;
           width: 2px;
           background: #e2e8f0;
-          height: 9px;
+          height: 11px;
           z-index: 1;
         }
 
         .roadmap-card-inner {
           background: rgba(255, 255, 255, 0.85);
           border: 1px solid rgba(226, 232, 240, 0.95);
-          border-radius: 12px;
-          padding: 6px 8px;
+          border-radius: 14px;
+          padding: 8px 10px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 6px;
+          gap: 8px;
           flex: 1;
           min-width: 0;
           transition: all 0.2s ease;
-          box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+          box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
         }
 
         .roadmap-card-inner:hover {
           background: #ffffff;
           border-color: #cbd5e1;
           transform: translateX(2px);
-          box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+          box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
         }
 
         .roadmap-item-left {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 8px;
           min-width: 0;
         }
 
         .roadmap-step-icon {
-          width: 24px;
-          height: 24px;
-          border-radius: 7px;
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1030,8 +1038,8 @@ export default function Certifications() {
         }
 
         .roadmap-step-title {
-          font-size: 0.77rem;
-          font-weight: 800;
+          font-size: 0.84rem;
+          font-weight: 850;
           color: #0f172a;
           line-height: 1.2;
           white-space: nowrap;
@@ -1040,9 +1048,9 @@ export default function Certifications() {
         }
 
         .roadmap-step-sub {
-          font-size: 0.64rem;
+          font-size: 0.70rem;
           color: #64748b;
-          margin-top: 1px;
+          margin-top: 2px;
           line-height: 1.25;
           white-space: nowrap;
           overflow: hidden;
@@ -1050,9 +1058,9 @@ export default function Certifications() {
         }
 
         .roadmap-status-pill {
-          font-size: 0.58rem;
+          font-size: 0.64rem;
           font-weight: 800;
-          padding: 2px 6px;
+          padding: 3px 8px;
           border-radius: 100px;
           white-space: nowrap;
           flex-shrink: 0;
@@ -1068,17 +1076,17 @@ export default function Certifications() {
         .roadmap-callout-box {
           background: rgba(255, 255, 255, 0.75);
           border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 12px;
-          padding: 8px 10px;
+          border-radius: 14px;
+          padding: 10px 12px;
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
         }
 
         .callout-target-bubble {
-          width: 28px;
-          height: 28px;
-          border-radius: 8px;
+          width: 30px;
+          height: 30px;
+          border-radius: 9px;
           background: rgba(99, 102, 241, 0.1);
           color: #6366f1;
           display: flex;
@@ -1088,15 +1096,15 @@ export default function Certifications() {
         }
 
         .callout-title {
-          font-size: 0.78rem;
+          font-size: 0.82rem;
           font-weight: 850;
           color: #0f172a;
         }
 
         .callout-sub {
-          font-size: 0.66rem;
+          font-size: 0.70rem;
           color: #64748b;
-          margin-top: 1px;
+          margin-top: 2px;
           font-style: italic;
         }
 
@@ -1106,27 +1114,27 @@ export default function Certifications() {
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.95);
-          border-radius: 18px;
-          padding: 16px 20px;
+          border-radius: 22px;
+          padding: 22px 28px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 16px;
-          margin-top: 22px;
-          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+          gap: 20px;
+          margin-top: 32px;
+          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
           flex-wrap: wrap;
         }
 
         .banner-left-wrap {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 14px;
         }
 
         .banner-shield-bubble {
-          width: 36px;
-          height: 36px;
-          border-radius: 10px;
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
           background: rgba(99, 102, 241, 0.08);
           color: #6366f1;
           display: flex;
@@ -1136,29 +1144,29 @@ export default function Certifications() {
         }
 
         .banner-title {
-          font-size: 0.92rem;
+          font-size: 1.05rem;
           font-weight: 850;
           color: #0f172a;
         }
 
         .banner-sub {
-          font-size: 0.74rem;
+          font-size: 0.84rem;
           color: #64748b;
-          margin-top: 1px;
+          margin-top: 3px;
         }
 
         .banner-btn {
-          padding: 8px 18px;
+          padding: 10px 22px;
           border-radius: 100px;
           background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
           color: #ffffff;
-          font-size: 0.8rem;
+          font-size: 0.86rem;
           font-weight: 800;
           border: none;
           cursor: pointer;
           display: inline-flex;
           align-items: center;
-          gap: 6px;
+          gap: 8px;
           text-decoration: none;
           box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
           transition: all 0.2s ease;
@@ -1251,9 +1259,10 @@ export default function Certifications() {
         }
 
         /* ── Responsive Breakpoints ── */
-        @media (max-width: 1024px) {
+        @media (max-width: 1120px) {
           .cert-3col-grid {
             grid-template-columns: 1fr 1fr;
+            gap: 16px;
           }
           .skill-column-wrap {
             grid-column: span 2;
@@ -1263,11 +1272,22 @@ export default function Certifications() {
         @media (max-width: 768px) {
           .cert-page {
             padding-top: 110px;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding-bottom: 70px;
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          .cert-hero-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+          }
+          .cert-hero-left, .cert-quote-box {
+            width: 100%;
+            min-width: 0;
           }
           .cert-3col-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
           }
           .skill-column-wrap {
             grid-column: span 1;
@@ -1276,20 +1296,22 @@ export default function Certifications() {
             grid-template-columns: 1fr 1fr;
           }
           .cert-hero-title {
-            font-size: 2rem;
+            font-size: 2.1rem;
           }
           .cert-counters-row {
             width: 100%;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
           }
           .cert-counter-card {
-            flex: 1;
             min-width: 0;
-            padding: 10px 4px;
+            padding: 12px 8px;
           }
           .cert-toolbar {
             flex-direction: column;
             align-items: stretch;
+            gap: 12px;
           }
           .cert-search-wrap {
             width: 100%;
@@ -1301,10 +1323,10 @@ export default function Certifications() {
             grid-template-columns: 1fr;
           }
           .counter-num {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
           }
           .counter-label {
-            font-size: 0.62rem;
+            font-size: 0.68rem;
           }
         }
       `}</style>
@@ -1315,7 +1337,10 @@ export default function Certifications() {
         <div className="cert-hero-wrapper">
           {/* Left Title & Tag */}
           <div className="cert-hero-left">
-            <span className="cert-pill-badge">CERTIFICATIONS</span>
+            <div className="cert-pill-badge">
+              <Award size={14} />
+              <span>CERTIFICATIONS &amp; CREDENTIALS</span>
+            </div>
             <h1 className="cert-hero-title">
               Validate Skills. <span className="highlight-word">Prove Growth.</span>
             </h1>
